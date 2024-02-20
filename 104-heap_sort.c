@@ -17,8 +17,8 @@ void swap_element(int *a, int *b)
 	*b = tmp;
 }
 /**
- * max_heapify - function turns binary tree into binary heap
- * @array: array of integers
+ * max_heapify - this function turns binary tree into binary heap
+ * @array: array of integer values
  * @size: size of array
  * @base: index of the base row of tree
  * @root: root node
@@ -46,7 +46,7 @@ void max_heapify(int *array, size_t size, size_t base, size_t root)
 }
 
 /**
- * heap_sort - Sort an array of integers in ascending order
+ * heap_sort - Sort an array of integer values in ascending order
  * @array: array of integers
  * @size: size of array
  * Description: prints array after each swap

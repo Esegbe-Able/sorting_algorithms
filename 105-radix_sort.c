@@ -5,9 +5,9 @@ void radix_sort(int *array, size_t size);
 
 /**
  * get_max - function gets max value in array of integers
- * @array: Array of integers
+ * @array: Array containing integer values
  * @size: size of array
- * Return: max integer in array
+ * Return: maximum integer in array
  */
 
 int get_max(int *array, int size)
@@ -23,8 +23,8 @@ int get_max(int *array, int size)
 	return (max);
 }
 /**
- * radix_counting_sort - function sorts array of integer
- * @array: array of integers
+ * radix_counting_sort - function is meant to sort array of integers
+ * @array: array of integer values
  * @size: size of array
  * @sig: digit to sort
  * @buff: buffer to store sorted array
@@ -51,8 +51,9 @@ void radix_counting_sort(int *array, size_t size, int sig, int *buff)
 		array[i] = buff[i];
 }
 /**
- * radix_sort - sort an array of integers in ascending order
- * @array: array of integers
+ * radix_sort - the function sorts an array of integers
+ * in ascending order
+ * @array: array of integer values
  * @size: size of array
  * Description: prints res by implement LSD radix sort algor
  */

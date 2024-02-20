@@ -7,9 +7,9 @@ void insertion_sort_deck_value(deck_node_t **deck);
 void sort_deck(deck_node_t **deck);
 
 /**
- * _strcmp - function compares double strings
- * @s1: 1st string to be compared
- * @s2: 2nd string
+ * _strcmp - this function compares double strings
+ * @s1: First string to be compared
+ * @s2: Second string to be compared
  * Return: Positive byte if s1 > s2, 0 if s1 == s2
  * Negative byte if s1 < s2
  */
@@ -65,7 +65,7 @@ char get_value(deck_node_t *card)
 }
 
 /**
- * insertion_sort_deck_kind - function sorts deck of card
+ * insertion_sort_deck_kind - sorts deck of card
  * @deck: pointer to head of a deck_node_t doubly-linked list
  */
 
@@ -95,7 +95,7 @@ void insertion_sort_deck_kind(deck_node_t **deck)
 }
 
 /**
- * insertion_sort_deck_value - function sorts deck of cards
+ * insertion_sort_deck_value - It sorts deck of cards
  * @deck: pointer to head of deck_node_t doubly-linked list
  */
 
@@ -127,8 +127,9 @@ void insertion_sort_deck_value(deck_node_t **deck)
 }
 
 /**
- * sort_deck - function sorts deck of cards
- * @deck: pointer to head of deck_node_t doubly-linked list
+ * sort_deck - this function sorts deck of cards
+ * @deck: pointer that points to the head of deck_node_t
+ * doubly-linked list
  */
 
 void sort_deck(deck_node_t **deck)

@@ -6,9 +6,9 @@ void lomuto_sort(int *array, size_t size, int left, int right);
 void quick_sort(int *array, size_t size);
 
 /**
- * swap_element - func swaps dual ints
+ * swap_element - this function swaps two integer values
  * @a: The 1st integer
- * @b: The 2nd integer
+ * @b: second integer
  */
 void swap_element(int *a, int *b)
 {
@@ -20,12 +20,13 @@ void swap_element(int *a, int *b)
 }
 
 /**
- * lomuto_partition - Reorders a subset of an array of integers.
- * @array: array of integers.
+ * lomuto_partition - The function reorders a subset of an array
+ * of integer values.
+ * @array: array containing int values.
  * @size: size of the array.
  * @left: starting index of subset
  * @right: ending index o fsubset
- * Return: The final partition index.
+ * Return: final partition index.
  */
 
 int lomuto_partition(int *array, size_t size, int left, int right)
@@ -56,8 +57,8 @@ int lomuto_partition(int *array, size_t size, int left, int right)
 }
 
 /**
- * lomuto_sort - uses quicksort algor
- * @array: An array of integer
+ * lomuto_sort - uses quicksort algorithm to sort
+ * @array: array of integer values
  * @size: size of the array.
  * @left: starting index of array
  * @right: ending index of array par
@@ -76,9 +77,10 @@ void lomuto_sort(int *array, size_t size, int left, int right)
 }
 
 /**
- * quick_sort - func sorts array of integers in ascending
- * @array: array of integers.
- * @size: size of array.
+ * quick_sort - quick_sort function sorts array of integer values
+ * in ascending
+ * @array: array containing integer values.
+ * @size: size of the array.
  * Description: Prints array after swap
  */
 void quick_sort(int *array, size_t size)

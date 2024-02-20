@@ -6,7 +6,7 @@ void quick_sort_hoare(int *array, size_t size);
 
 /**
  * swap_element - Swap integers in array
- * @a: fir integer
+ * @a: first integer
  * @b: 2nd integer
  */
 
@@ -19,7 +19,7 @@ void swap_element(int *a, int *b)
 	*b = tmp;
 }
 /**
- * hoare_partition - subset of an array of integers
+ * hoare_partition - this is a subset of an array of integer values
  * @array: array of integers
  * @size: size of array
  * @left: starting index of the subset
@@ -73,8 +73,9 @@ void hoare_sort(int *array, size_t size, int left, int right)
 }
 
 /**
- * quick_sort_hoare - fuc sorts array of ints in ascend order
- * @array: array of integers
+ * quick_sort_hoare - this function is meant to sorts array
+ * of integer values in ascend order
+ * @array: array of integer values
  * @size: size of the array.
  * Description: Prints array after swap
  */

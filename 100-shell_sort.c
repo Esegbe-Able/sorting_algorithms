@@ -16,7 +16,8 @@ void swap_element(int *a, int *b)
 }
 
 /**
- * shell_sort - Sort array of integers
+ * shell_sort - shell_sort function Sorts array of
+ * integer values
  * @array: array of integers
  * @size: size of array
  * Description: Uses interval sequence

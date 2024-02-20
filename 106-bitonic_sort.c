@@ -7,9 +7,9 @@ void bitonic_seq(int *array, size_t size, size_t start, size_t seq, char flow);
 void bitonic_sort(int *array, size_t size);
 
 /**
- * swap_element - Swaps integers
- * @a: 1st integer
- * @b: 2nd integer
+ * swap_element - Swap function (Swaps integers)
+ * @a: First integer
+ * @b: Second integer
  */
 
 void swap_element(int *a, int *b)
@@ -49,11 +49,12 @@ void bitonic_merge(int *array, size_t size, size_t start, size_t seq,
 }
 
 /**
- * bitonic_seq - func convert array of integers into bitonic sequence.
- * @array: array of integers
+ * bitonic_seq - func convert array of integer values
+ * into bitonic sequence.
+ * @array: array of integer values
  * @size: size of array
  * @start: starting index of a block
- * @seq: The size of a block
+ * @seq: size of a block
  * @flow: direction to sort bitonic seq
  */
 
@@ -77,8 +78,8 @@ void bitonic_seq(int *array, size_t size, size_t start, size_t seq, char flow)
 }
 
 /**
- * bitonic_sort - Sorts array of ints
- * @array: array of integers.
+ * bitonic_sort - Sorts array of integer values
+ * @array: array of integers values
  * @size: The size of array
  * Description: Prints array after swap
  */

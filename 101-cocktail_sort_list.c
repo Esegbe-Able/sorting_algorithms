@@ -5,9 +5,9 @@ void swap_node_behind(list_tail **list, list_tail **tail, list_tail **shaker);
 void cocktail_sort_list(list_tail **list);
 
 /**
- * swap_node_ahead - Swaps node
- * @list: Pointer to head of doubly-linked list
- * @tail: A pointer to the tail of the doubly-linked list
+ * swap_node_ahead - This function Swaps node
+ * @list: Pointer (head of doubly-linked list)
+ * @tail: Pointer (tail of the doubly-linked list)
  * @shaker: pointer to swapping node
  */
 
@@ -31,9 +31,9 @@ void swap_node_ahead(list_tail **list, list_tail **tail, list_tail **shaker)
 }
 
 /**
- * swap_node_behind - swaps node
- * @list: pointer to the head
- * @tail: pointer to the tail
+ * swap_node_behind - this function also swaps node
+ * @list: pointer that points to the head
+ * @tail: pointer that points to the tail
  * @shaker: pointer to current swapping node
  */
 
@@ -57,8 +57,9 @@ void swap_node_behind(list_tail **list, list_tail **tail, list_tail **shaker)
 }
 
 /**
- * cocktail_sort_list - function sorts integers
- * @list: pointer to head of list_tail doubly-linked list
+ * cocktail_sort_list - cocktail_sort_list function sorts
+ * integer values
+ * @list: Ptr that points to head of list_tail doubly-linked list
  */
 void cocktail_sort_list(list_tail **list)
 {
