@@ -1,83 +1,82 @@
 #include "sort.h"
-void merge_subarr(int *subarr, int *buff, size_t front, size_t mid,
-		size_t back);
-void merge_sort_recursive(int *subarr, int *buff, size_t front, size_t back);
-void merge_sort(int *array, size_t size);
 
 /**
- * merge_subarr - This function sort integers
- * @subarr: Sub array of array of ints
- * @buff: buffer that stores subarray
- * @front: front index of array
- * @mid: middle index of array
- * @back: back index of array
+ * partition - Function partition the list into two parts.
+ * @array: The list to be partitioned.
+ * @lo: The lower bound
+ * @hi: The higher bound.
+ *
+ * Return: the pivot index
  */
-
-void merge_subarr(int *subarr, int *buff, size_t front, size_t mid,
-		size_t back)
+int partition(int *array, int lo, size_t hi)
 {
-	size_t i, j, k = 0;
+	int pivot = array[hi];
+	int end, start = (lo - 1);
 
-	printf("Merging...\n[left]: ");
-	print_array(subarr + front, mid - front);
+	for (end = lo; end <= (int)hi - 1; end++)
+	{
+		if (array[end] < pivot)
+		{
+			start++;
+			swap(array, start, end);
+		}
+	}
+	if (array[start + 1] > array[hi])
+		swap(array, start + 1, hi);
 
-	printf("[right]: ");
-	print_array(subarr + mid, back - mid);
-
-	for (i = front, j = mid; i < mid && j < back; k++)
-		buff[k] = (subarr[i] < subarr[j]) ? subarr[i++] : subarr[j++];
-	for (; i < mid; i++)
-		buff[k++] = subarr[i];
-	for (; j < back; j++)
-		buff[k++] = subarr[j];
-	for (i = front, k = 0; i < back; i++)
-		subarr[i] = buff[k++];
-
-	printf("[Done]: ");
-	print_array(subarr + front, back - front);
+	return (start + 1);
 }
 
 /**
- * merge_sort_recursive - function for implementing the merge
- * @subarr: sub array of ints
- * @buff: buffer to store sorted result
- * @front: front index of subarray
- * @back: final index of subarray
+ * quick_sort - Sort a list of integer using quick sort.
+ * @array: The array of integer
+ * @size: The size of the array.
+ *
+ * Return: Nothing
  */
-
-void merge_sort_recursive(int *subarr, int *buff, size_t front, size_t back)
+void quick_sort(int *array, size_t size)
 {
-	size_t mid;
+	if (size < 2)
+		return;
 
-	if (back - front > 1)
+	quicksort(array, 0, size - 1);
+}
+
+/**
+ * quicksort - Function that quick sort an array of integers.
+ * @array: The array of integers
+ * @lo: The lower bound
+ * @hi: The higher bound
+ *
+ * Return: Nothing
+ */
+void quicksort(int *array, int lo, size_t hi)
+{
+	int location;
+
+	if (lo < (int)hi)
 	{
-		mid = front + (back - front) / 2;
-		merge_sort_recursive(subarr, buff, front, mid);
-		merge_sort_recursive(subarr, buff, mid, back);
-		merge_subarr(subarr, buff, front, mid, back);
+		location = partition(array, lo, hi);
+		print_array(array, hi + 1);
+		quicksort(array, lo, location - 1);
+		quicksort(array, location + 1, hi);
 	}
 }
 
 /**
- * merge_sort - This function sorts array of integers
- * in ascending order
- * @array: contains array of integers
- * @size: size of array
- * Description: function uses top-down merge sort
+ *swap - swap the the elements at the given indices
+ *@arr: pointer to array
+ *@idx1: first index
+ *@idx2: second index
+ *Return: 1 (Success)
  */
 
-void merge_sort(int *array, size_t size)
+int swap(int arr[], int idx1, int idx2)
 {
-	int *buff;
+	int tmp;
 
-	if (array == NULL || size < 2)
-		return;
-
-	buff = malloc(sizeof(int) * size);
-	if (buff == NULL)
-		return;
-
-	merge_sort_recursive(array, buff, 0, size);
-
-	free(buff);
+	tmp = arr[idx1];
+	arr[idx1] = arr[idx2];
+	arr[idx2] = tmp;
+	return (1);
 }
