@@ -1,9 +1,9 @@
 #include "sort.h"
 
 /**
- * swap_element - func swap two integers in an array.
- * @a: the first integer
- * @b: The second integer
+ * swap_element - It swaps two integers in an array.
+ * @a: first int val
+ * @b: second int val
  */
 void swap_element(int *a, int *b)
 {
@@ -15,10 +15,11 @@ void swap_element(int *a, int *b)
 }
 
 /**
- * selection_sort - func dort an array of integers in ascending order
- * @array: array of integers.
+ * selection_sort - this function sorts an array of
+ * integer values in ascending order
+ * @array: array of integer values.
  * @size: size of the array.
- * Description: Prints array after swap
+ * Description: prints array
  */
 
 void selection_sort(int *array, size_t size)

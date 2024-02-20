@@ -5,8 +5,8 @@ void hoare_sort(int *array, size_t size, int left, int right);
 void quick_sort_hoare(int *array, size_t size);
 
 /**
- * swap_element - This function swap integers values in array
- * @a: first integer
+ * swap_element - Swap integers in array
+ * @a: fir integer
  * @b: 2nd integer
  */
 
@@ -19,9 +19,9 @@ void swap_element(int *a, int *b)
 	*b = tmp;
 }
 /**
- * hoare_partition - Function's subset of an array of integers
+ * hoare_partition - subset of an array of integers
  * @array: array of integers
- * @size: size of the array
+ * @size: size of array
  * @left: starting index of the subset
  * @right: ending index of subset
  * Return: tofinal partition index
@@ -52,10 +52,10 @@ int hoare_partition(int *array, size_t size, int left, int right)
 	return (above);
 }
 /**
- * hoare_sort - function (quicksort algorithm)
- * @array: array of integersh
+ * hoare_sort - quicksort algorithm
+ * @array: array of integers
  * @size: size of the array.
- * @left: starting index of array part
+ * @left: starting index of array parti
  * @right: ending index of array
  * Description: hoare partition scheme
  */
@@ -73,10 +73,9 @@ void hoare_sort(int *array, size_t size, int left, int right)
 }
 
 /**
- * quick_sort_hoare - function sorts array of integer values in
- * ascen ing order
+ * quick_sort_hoare - fuc sorts array of ints in ascend order
  * @array: array of integers
- * @size: size of array.
+ * @size: size of the array.
  * Description: Prints array after swap
  */
 void quick_sort_hoare(int *array, size_t size)

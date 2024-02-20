@@ -1,82 +1,90 @@
 #include "sort.h"
 
-/**
- * partition - Function partition the list into two parts.
- * @array: The list to be partitioned.
- * @lo: The lower bound
- * @hi: The higher bound.
- *
- * Return: the pivot index
- */
-int partition(int *array, int lo, size_t hi)
-{
-	int pivot = array[hi];
-	int end, start = (lo - 1);
-
-	for (end = lo; end <= (int)hi - 1; end++)
-	{
-		if (array[end] < pivot)
-		{
-			start++;
-			swap(array, start, end);
-		}
-	}
-	if (array[start + 1] > array[hi])
-		swap(array, start + 1, hi);
-
-	return (start + 1);
-}
+void swap_element(int *a, int *b);
+int lomuto_partition(int *array, size_t size, int left, int right);
+void lomuto_sort(int *array, size_t size, int left, int right);
+void quick_sort(int *array, size_t size);
 
 /**
- * quick_sort - Sort a list of integer using quick sort.
- * @array: The array of integer
- * @size: The size of the array.
- *
- * Return: Nothing
+ * swap_element - func swaps dual ints
+ * @a: The 1st integer
+ * @b: The 2nd integer
  */
-void quick_sort(int *array, size_t size)
-{
-	if (size < 2)
-		return;
-
-	quicksort(array, 0, size - 1);
-}
-
-/**
- * quicksort - Function that quick sort an array of integers.
- * @array: The array of integers
- * @lo: The lower bound
- * @hi: The higher bound
- *
- * Return: Nothing
- */
-void quicksort(int *array, int lo, size_t hi)
-{
-	int location;
-
-	if (lo < (int)hi)
-	{
-		location = partition(array, lo, hi);
-		print_array(array, hi + 1);
-		quicksort(array, lo, location - 1);
-		quicksort(array, location + 1, hi);
-	}
-}
-
-/**
- *swap - swap the the elements at the given indices
- *@arr: pointer to array
- *@idx1: first index
- *@idx2: second index
- *Return: 1 (Success)
- */
-
-int swap(int arr[], int idx1, int idx2)
+void swap_element(int *a, int *b)
 {
 	int tmp;
 
-	tmp = arr[idx1];
-	arr[idx1] = arr[idx2];
-	arr[idx2] = tmp;
-	return (1);
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
+}
+
+/**
+ * lomuto_partition - Reorders a subset of an array of integers.
+ * @array: array of integers.
+ * @size: size of the array.
+ * @left: starting index of subset
+ * @right: ending index o fsubset
+ * Return: The final partition index.
+ */
+
+int lomuto_partition(int *array, size_t size, int left, int right)
+{
+	int *pivot, above, below;
+
+	pivot = array + right;
+	for (above = below = left; below < right; below++)
+	{
+		if (array[below] < *pivot)
+		{
+			if (above < below)
+			{
+				swap_element(array + below, array + above);
+				print_array(array, size);
+			}
+			above++;
+		}
+	}
+
+	if (array[above] > *pivot)
+	{
+		swap_element(array + above, pivot);
+		print_array(array, size);
+	}
+
+	return (above);
+}
+
+/**
+ * lomuto_sort - uses quicksort algor
+ * @array: An array of integer
+ * @size: size of the array.
+ * @left: starting index of array
+ * @right: ending index of array par
+ * Description: Uses Lomuto partition scheme.
+ */
+void lomuto_sort(int *array, size_t size, int left, int right)
+{
+	int part;
+
+	if (right - left > 0)
+	{
+		part = lomuto_partition(array, size, left, right);
+		lomuto_sort(array, size, left, part - 1);
+		lomuto_sort(array, size, part + 1, right);
+	}
+}
+
+/**
+ * quick_sort - func sorts array of integers in ascending
+ * @array: array of integers.
+ * @size: size of array.
+ * Description: Prints array after swap
+ */
+void quick_sort(int *array, size_t size)
+{
+	if (array == NULL || size < 2)
+		return;
+
+	lomuto_sort(array, size, 0, size - 1);
 }

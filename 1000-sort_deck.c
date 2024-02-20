@@ -7,9 +7,9 @@ void insertion_sort_deck_value(deck_node_t **deck);
 void sort_deck(deck_node_t **deck);
 
 /**
- * _strcmp - _strcm function compares double strings
+ * _strcmp - function compares double strings
  * @s1: 1st string to be compared
- * @s2: 2nd string to be compared
+ * @s2: 2nd string
  * Return: Positive byte if s1 > s2, 0 if s1 == s2
  * Negative byte if s1 < s2
  */
@@ -28,7 +28,7 @@ int _strcmp(const char *s1, const char *s2)
 }
 
 /**
- * get_value - gets numerical value of a card
+ * get_value - function to get numerical value of a card
  * @card: pointer to deck_node_t card
  * Return: numerical value of card
  */

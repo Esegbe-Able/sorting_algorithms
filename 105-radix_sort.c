@@ -4,8 +4,8 @@ void radix_counting_sort(int *array, size_t size, int sig, int *buff);
 void radix_sort(int *array, size_t size);
 
 /**
- * get_max - This function gets maximum value in array of integers
- * @array: The array of integer values
+ * get_max - function gets max value in array of integers
+ * @array: Array of integers
  * @size: size of array
  * Return: max integer in array
  */
@@ -23,9 +23,8 @@ int get_max(int *array, int size)
 	return (max);
 }
 /**
- * radix_counting_sort - radix_counting_sort function sorts
- * array of integer values
- * @array: The array of integer values
+ * radix_counting_sort - function sorts array of integer
+ * @array: array of integers
  * @size: size of array
  * @sig: digit to sort
  * @buff: buffer to store sorted array

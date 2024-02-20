@@ -2,21 +2,21 @@
 #include "sort.h"
 
 /**
- * print_list - This function prints a list of integers
+ * print_list - prints a list of integers
  *
- * @list: lit to print
+ * @list: The list to be printed
  */
 void print_list(const listint_t *list)
 {
-	int j;
+	int i;
 
-	j = 0;
+	i = 0;
 	while (list)
 	{
-		if (j > 0)
+		if (i > 0)
 			printf(", ");
 		printf("%d", list->n);
-		++j;
+		++i;
 		list = list->next;
 	}
 	printf("\n");

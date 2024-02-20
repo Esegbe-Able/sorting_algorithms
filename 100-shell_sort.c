@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * swap_element - this function swaps two integer values
+ * swap_element - Func swaps two ints
  * @a: 1st integer
  * @b: 2nd integer
  */
@@ -16,8 +16,8 @@ void swap_element(int *a, int *b)
 }
 
 /**
- * shell_sort - Function that sorts array of integers
- * @array: array of ints
+ * shell_sort - Sort array of integers
+ * @array: array of integers
  * @size: size of array
  * Description: Uses interval sequence
  */

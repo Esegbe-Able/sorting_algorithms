@@ -1,8 +1,8 @@
 #include "sort.h"
 /**
- * swap_element - This function swaps two integers
- * @a: 1st integer
- * @b: 2nd integer
+ * swap_element - This function is meant to swap integers
+ * @a: First integer
+ * @b: Second integer
  */
 
 void swap_element(int *a, int *b)
@@ -14,10 +14,10 @@ void swap_element(int *a, int *b)
 	*b = tmp;
 }
 /**
- * bubble_sort - bubble_sort sorts array of integer
- * @array: array of integers
- * @size: size of the array
- * Description: func prints array
+ * bubble_sort - It sorts arrays of integer values
+ * @array: array containing int values
+ * @size: size of array
+ * Description: prints array of int vals
  */
 
 void bubble_sort(int *array, size_t size)

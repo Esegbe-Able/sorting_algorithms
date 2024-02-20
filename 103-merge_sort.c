@@ -5,10 +5,10 @@ void merge_sort_recursive(int *subarr, int *buff, size_t front, size_t back);
 void merge_sort(int *array, size_t size);
 
 /**
- * merge_subarr - This function is meant to sort integer values
+ * merge_subarr - function sort integers
  * @subarr: Sub array of array of ints
- * @buff: buffer to store subarray values
- * @front: front index of array values
+ * @buff: buffer to store subarray
+ * @front: front index of array
  * @mid: middle index of array
  * @back: back index of array
  */
@@ -38,8 +38,8 @@ void merge_subarr(int *subarr, int *buff, size_t front, size_t mid,
 }
 
 /**
- * merge_sort_recursive - function implementaion of merge
- * @subarr: sub array of array of integers
+ * merge_sort_recursive - function implement the merge
+ * @subarr: sub array of array of ints
  * @buff: buffer to store sorted result
  * @front: front index of subarray
  * @back: back index of subarray
@@ -59,9 +59,8 @@ void merge_sort_recursive(int *subarr, int *buff, size_t front, size_t back)
 }
 
 /**
- * merge_sort - merge_sort function sorts array of ints
- * in ascending order
- * @array: array of integer values
+ * merge_sort - sorts array of integers in ascending order
+ * @array: array of integers
  * @size: size of array
  * Description: function uses top-down merge sort
  */

@@ -1,10 +1,9 @@
 #include "sort.h"
 /**
- * get_max - get_max function gets maximum value in an array
- * of integers
- * @array: Array of integer values
+ * get_max - function gets maximum value in an array of integers
+ * @array: Array of integers
  * @size: size of array
- * Return: maximum integer value
+ * Return: maximum integer
  */
 
 int get_max(int *array, int size)
@@ -21,9 +20,8 @@ int get_max(int *array, int size)
 }
 
 /**
- * counting_sort - counting_sorts function sorts array of
- * integers
- * @array: array of type integers
+ * counting_sort - sorts array of ints
+ * @array: array of integers
  * @size: size of array
  * Description: prints array
  */
